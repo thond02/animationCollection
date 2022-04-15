@@ -16,7 +16,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        view.contentMode = .scaleAspectFill
+        view.contentMode = .scaleAspectFit
         self.addSubview(view)
     }
 

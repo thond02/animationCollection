@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -15,14 +15,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomCollectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vp-4k-3an">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lyP-rT-6xA">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="766"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="414" id="Hka-od-dbV"/>
@@ -48,9 +48,9 @@
                                 <constraints>
                                     <constraint firstItem="lyP-rT-6xA" firstAttribute="top" secondItem="ELu-x1-OUa" secondAttribute="top" id="31C-3q-7g8"/>
                                     <constraint firstItem="lyP-rT-6xA" firstAttribute="leading" secondItem="ELu-x1-OUa" secondAttribute="leading" id="EYl-Gk-jYe"/>
-                                    <constraint firstItem="lyP-rT-6xA" firstAttribute="trailing" secondItem="ELu-x1-OUa" secondAttribute="trailing" constant="414" id="FCR-xH-6bi"/>
+                                    <constraint firstItem="lyP-rT-6xA" firstAttribute="trailing" secondItem="ELu-x1-OUa" secondAttribute="trailing" id="FCR-xH-6bi"/>
                                     <constraint firstItem="lyP-rT-6xA" firstAttribute="height" secondItem="2vp-4k-3an" secondAttribute="height" id="XuY-B8-7Bq"/>
-                                    <constraint firstItem="lyP-rT-6xA" firstAttribute="bottom" secondItem="ELu-x1-OUa" secondAttribute="bottom" constant="818" id="lXf-eM-gk8"/>
+                                    <constraint firstItem="lyP-rT-6xA" firstAttribute="bottom" secondItem="ELu-x1-OUa" secondAttribute="bottom" id="lXf-eM-gk8"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="ELu-x1-OUa"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="7dE-QK-R9u"/>

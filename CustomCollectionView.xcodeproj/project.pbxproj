@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		831F09B52809083100BF117A /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 831F09B42809083100BF117A /* 2.png */; };
 		8706E4A4239FD57B0066B3FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8706E4A3239FD57B0066B3FA /* AppDelegate.swift */; };
 		8706E4A6239FD57B0066B3FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8706E4A5239FD57B0066B3FA /* SceneDelegate.swift */; };
 		8706E4A8239FD57B0066B3FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8706E4A7239FD57B0066B3FA /* ViewController.swift */; };
@@ -18,7 +19,7 @@
 		8706E4D4239FD72D0066B3FA /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8706E4D3239FD72D0066B3FA /* CustomCollectionViewCell.swift */; };
 		8706E4D6239FD74A0066B3FA /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8706E4D5239FD74A0066B3FA /* CustomCollectionViewCell.xib */; };
 		D09E0E49280885F6004DC959 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D09E0E48280885F5004DC959 /* 1.jpeg */; };
-		D09E0E4B28088993004DC959 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = D09E0E4A28088993004DC959 /* 2.png */; };
+		D09E0E4B28088993004DC959 /* 23.png in Resources */ = {isa = PBXBuildFile; fileRef = D09E0E4A28088993004DC959 /* 23.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		831F09B42809083100BF117A /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		8706E4A0239FD57B0066B3FA /* CustomCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8706E4A3239FD57B0066B3FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8706E4A5239FD57B0066B3FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +58,7 @@
 		8706E4D3239FD72D0066B3FA /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		8706E4D5239FD74A0066B3FA /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 		D09E0E48280885F5004DC959 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
-		D09E0E4A28088993004DC959 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		D09E0E4A28088993004DC959 /* 23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 23.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +111,9 @@
 			children = (
 				8706E4A3239FD57B0066B3FA /* AppDelegate.swift */,
 				8706E4A5239FD57B0066B3FA /* SceneDelegate.swift */,
+				831F09B42809083100BF117A /* 2.png */,
 				D09E0E48280885F5004DC959 /* 1.jpeg */,
-				D09E0E4A28088993004DC959 /* 2.png */,
+				D09E0E4A28088993004DC959 /* 23.png */,
 				8706E4A7239FD57B0066B3FA /* ViewController.swift */,
 				8706E4D3239FD72D0066B3FA /* CustomCollectionViewCell.swift */,
 				8706E4D5239FD74A0066B3FA /* CustomCollectionViewCell.xib */,
@@ -244,11 +247,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831F09B52809083100BF117A /* 2.png in Resources */,
 				8706E4B0239FD57F0066B3FA /* LaunchScreen.storyboard in Resources */,
 				8706E4AD239FD57F0066B3FA /* Assets.xcassets in Resources */,
 				8706E4AB239FD57B0066B3FA /* Main.storyboard in Resources */,
 				D09E0E49280885F6004DC959 /* 1.jpeg in Resources */,
-				D09E0E4B28088993004DC959 /* 2.png in Resources */,
+				D09E0E4B28088993004DC959 /* 23.png in Resources */,
 				8706E4D6239FD74A0066B3FA /* CustomCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

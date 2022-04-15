@@ -7,9 +7,11 @@
 //
 
 import UIKit
-
+let width = 1148.0
+let height = 1634.0
 class ViewController: UIViewController {
-
+let loop = 100
+    
   @IBOutlet weak var scrollView: UIScrollView!
   @IBOutlet weak var collectionView: UICollectionView!
   @IBOutlet weak var cVWidth: NSLayoutConstraint!
@@ -28,16 +30,22 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-//            self.scrollY(self.collectionView)
-//            self.scrollX(self.scrollView)
-//
-//        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
+            self.scrollY(self.collectionView)
+            self.scrollX(self.scrollView)
+
+        }
         
     }
-    
     func scrollY(_ collectionView: UIScrollView) {
         var currentOffsetY = collectionView.contentOffset.y + 20
+        if currentOffsetY > self.collectionView.contentSize.height {
+            collectionView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
+            self.scrollY(self.collectionView)
+            self.scrollX(self.scrollView)
+            print("thond:new")
+            return
+        }
         collectionView.setContentOffset(CGPoint(x: 0, y: currentOffsetY), animated: true)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
             self.scrollY(collectionView)
@@ -46,6 +54,13 @@ class ViewController: UIViewController {
     
     func scrollX(_ collectionView: UIScrollView) {
         var currentOffsetX = collectionView.contentOffset.x + 20
+        if currentOffsetX > self.scrollView.contentSize.width {
+            collectionView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
+            self.scrollY(self.collectionView)
+            self.scrollX(self.scrollView)
+            print("thond:new")
+            return
+        }
         collectionView.setContentOffset(CGPoint(x: currentOffsetX, y: 0), animated: true)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
             self.scrollX(collectionView)
@@ -57,7 +72,7 @@ extension ViewController {
   func setupCollectionView() {
     collectionView.delegate = self
     collectionView.dataSource = self
-    cVWidth.constant = 5000
+      cVWidth.constant = width*CGFloat(loop)
     scrollView.contentSize = collectionView.frame.size
     collectionView.register(UINib(nibName: CustomCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CustomCollectionViewCell.identifier)
     
@@ -75,11 +90,11 @@ extension ViewController: UICollectionViewDelegate {
 
 extension ViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    1000
+    loop
   }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1000
+        return loop
     }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -97,8 +112,9 @@ extension ViewController: UICollectionViewDataSource {
 
 extension ViewController: UICollectionViewDelegateFlowLayout{
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-      return CGSize(width: (UIScreen.main.bounds.width) , height: (UIScreen.main.bounds.height))
-      image.size
+     // return CGSize(width: (UIScreen.main.bounds.width) , height: (UIScreen.main.bounds.height))
+      //image.size
+      return CGSize(width: width, height: height)
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
