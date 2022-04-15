@@ -13,16 +13,20 @@ class CustomCollectionViewCell: UICollectionViewCell {
   
   @IBOutlet weak var titleLBL: UILabel!
     let view = UIImageView(image: image)
+    let bg = UIImageView(image: UIImage(named: "bg_splash.jpg")!)
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        view.contentMode = .scaleAspectFit
+        
+        self.addSubview(bg)
         self.addSubview(view)
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
         view.frame = CGRect(origin: .zero, size: self.frame.size)
+        view.contentMode = .scaleAspectFit
+        bg.contentMode = .scaleAspectFit
         
     }
     

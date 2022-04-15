@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		831F09B52809083100BF117A /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 831F09B42809083100BF117A /* 2.png */; };
+		831F09B728092BEB00BF117A /* bg_splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 831F09B628092BEB00BF117A /* bg_splash.jpg */; };
 		8706E4A4239FD57B0066B3FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8706E4A3239FD57B0066B3FA /* AppDelegate.swift */; };
 		8706E4A6239FD57B0066B3FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8706E4A5239FD57B0066B3FA /* SceneDelegate.swift */; };
 		8706E4A8239FD57B0066B3FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8706E4A7239FD57B0066B3FA /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		831F09B42809083100BF117A /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		831F09B628092BEB00BF117A /* bg_splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_splash.jpg; sourceTree = "<group>"; };
 		8706E4A0239FD57B0066B3FA /* CustomCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8706E4A3239FD57B0066B3FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8706E4A5239FD57B0066B3FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				831F09B42809083100BF117A /* 2.png */,
 				D09E0E48280885F5004DC959 /* 1.jpeg */,
 				D09E0E4A28088993004DC959 /* 23.png */,
+				831F09B628092BEB00BF117A /* bg_splash.jpg */,
 				8706E4A7239FD57B0066B3FA /* ViewController.swift */,
 				8706E4D3239FD72D0066B3FA /* CustomCollectionViewCell.swift */,
 				8706E4D5239FD74A0066B3FA /* CustomCollectionViewCell.xib */,
@@ -254,6 +257,7 @@
 				D09E0E49280885F6004DC959 /* 1.jpeg in Resources */,
 				D09E0E4B28088993004DC959 /* 23.png in Resources */,
 				8706E4D6239FD74A0066B3FA /* CustomCollectionViewCell.xib in Resources */,
+				831F09B728092BEB00BF117A /* bg_splash.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

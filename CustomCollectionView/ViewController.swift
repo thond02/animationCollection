@@ -7,8 +7,8 @@
 //
 
 import UIKit
-let width = 1148.0
-let height = 1634.0
+let width = 1148.0//UIScreen.main.bounds.width
+let height = 1634.0//UIScreen.main.bounds.height
 class ViewController: UIViewController {
 let loop = 100
     
@@ -28,6 +28,10 @@ let loop = 100
         
     }
     
+    @IBAction func nexxt(_ sender: Any) {
+        print("neeeeeeeexxttttt")
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
