@@ -7,8 +7,12 @@
 //
 
 import UIKit
-let width = 1148.0//UIScreen.main.bounds.width
-let height = 1634.0//UIScreen.main.bounds.height
+//let width = 1148.0//UIScreen.main.bounds.width
+//let height = 1634.0//UIScreen.main.bounds.height
+let width = UIScreen.main.bounds.height*976.0/1389.0
+let height = UIScreen.main.bounds.height
+//let width = 976.0
+//let height = 1389.0
 class ViewController: UIViewController {
 let loop = 100
     
@@ -25,7 +29,15 @@ let loop = 100
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        //collectionView.scrollToItem(at: IndexPath(item: loop-1, section: loop-1), at: .bottom, animated: false)
+
+//        let bottomOffset = CGPoint(x: cVWidth.constant - width, y: 0)
+//        scrollView.setContentOffset(bottomOffset, animated: false)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
+//            self.scrollY(self.collectionView)
+//            self.scrollX(self.scrollView)
+
+        }
     }
     
     @IBAction func nexxt(_ sender: Any) {
@@ -34,15 +46,11 @@ let loop = 100
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
-            self.scrollY(self.collectionView)
-            self.scrollX(self.scrollView)
 
-        }
         
     }
     func scrollY(_ collectionView: UIScrollView) {
-        var currentOffsetY = collectionView.contentOffset.y + 20
+        var currentOffsetY = collectionView.contentOffset.y - 10
         if currentOffsetY > self.collectionView.contentSize.height {
             collectionView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
             self.scrollY(self.collectionView)
@@ -57,7 +65,7 @@ let loop = 100
     }
     
     func scrollX(_ collectionView: UIScrollView) {
-        var currentOffsetX = collectionView.contentOffset.x + 20
+        var currentOffsetX = collectionView.contentOffset.x - 10
         if currentOffsetX > self.scrollView.contentSize.width {
             collectionView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
             self.scrollY(self.collectionView)
