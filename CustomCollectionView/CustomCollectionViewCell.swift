@@ -18,7 +18,6 @@ class CustomCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         
-        self.addSubview(bg)
         self.addSubview(view)
     }
 
@@ -33,5 +32,6 @@ class CustomCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         self.backgroundColor = .clear
+        self.titleLBL.text = ""
     }
 }
