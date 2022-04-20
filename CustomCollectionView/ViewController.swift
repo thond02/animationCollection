@@ -9,19 +9,23 @@
 import UIKit
 //let width = 1148.0//UIScreen.main.bounds.width
 //let height = 1634.0//UIScreen.main.bounds.height
-let width = (UIScreen.main.bounds.height)*976.0/1389.0
-let height = (UIScreen.main.bounds.height)
+let width = (UIScreen.main.bounds.height-20)*976.0/1389.0
+let height = (UIScreen.main.bounds.height-20)
 //let width = 976.0
 //let height = 1389.0
 class ViewController: UIViewController {
-let loop = 20
-    let movementStep = 20.0
+let loop = 200
+    let movementStep = 100.0
   @IBOutlet weak var scrollView: UIScrollView!
   @IBOutlet weak var collectionView: UICollectionView!
   @IBOutlet weak var cVWidth: NSLayoutConstraint!
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+      self.view.isOpaque = true
+      self.scrollView.isPagingEnabled = false
+      self.scrollView.isOpaque = true
+      self.collectionView.isOpaque = true
+      self.collectionView.isPagingEnabled = false
     setupCollectionView()
       
       scrollView.delegate = self
@@ -29,7 +33,6 @@ let loop = 20
 
       let bottomOffset = CGPoint(x: cVWidth.constant - width, y: 0)
       scrollView.setContentOffset(bottomOffset, animated: false)
-
   }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -91,6 +94,9 @@ extension ViewController {
   func setupCollectionView() {
     collectionView.delegate = self
     collectionView.dataSource = self
+    let layout = UICollectionViewFlowLayout()
+      layout.itemSize = CGSize(width: width, height: height)
+      collectionView.collectionViewLayout = layout
       cVWidth.constant = width*CGFloat(loop)
     scrollView.contentSize = collectionView.frame.size
     collectionView.register(UINib(nibName: CustomCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CustomCollectionViewCell.identifier)
@@ -100,10 +106,10 @@ extension ViewController {
 
 extension ViewController: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("######scroll###########")
-        print(self.scrollView.contentOffset)
-        print("+++++coloection+++++++++++++")
-        print(self.collectionView.contentOffset)
+//        print("######scroll###########")
+//        print(self.scrollView.contentOffset)
+//        print("+++++coloection+++++++++++++")
+//        print(self.collectionView.contentOffset)
     }
 }
 
@@ -121,9 +127,9 @@ extension ViewController: UICollectionViewDataSource {
     let row = indexPath.row
       cell.titleLBL.text = "\(row) \(indexPath.section)"
       if (row + indexPath.section)  % 2 == 0 {
-      //cell.backgroundColor = .red
+      cell.backgroundColor = .red
     } else {
-      //cell.backgroundColor = .green
+      cell.backgroundColor = .green
     }
     return cell
   }
@@ -135,7 +141,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout{
     }
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
      // return CGSize(width: (UIScreen.main.bounds.width) , height: (UIScreen.main.bounds.height))
-      //image.size
+     // CGSize(width: 150, height: 150)
       return CGSize(width: width, height: height)
   }
   

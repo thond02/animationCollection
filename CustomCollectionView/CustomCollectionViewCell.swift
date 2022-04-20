@@ -16,14 +16,14 @@ class CustomCollectionViewCell: UICollectionViewCell {
     let bg = UIImageView(image: UIImage(named: "bg_splash.jpg")!)
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        
-        self.addSubview(view)
+        self.contentView.isOpaque = true
+        self.isOpaque = true
+      //  self.addSubview(view)
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        view.frame = CGRect(origin: .zero, size: self.frame.size)
+       // view.frame = CGRect(origin: .zero, size: self.frame.size)
         view.contentMode = .scaleAspectFit
         bg.contentMode = .scaleAspectFit
         
